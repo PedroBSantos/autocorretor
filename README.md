@@ -13,8 +13,8 @@ o algoritmo nos ajuda a encontrar qual o número mínimo de operações necessá
 
 ## Implementação
 
-A estrutura de dados base utilizada para a implementação do algoritmo é uma **matriz** de tamanho n + 1 x m + 1, onde n e m é o tamanho de **origin** e **target**
-respectivamente. <\br>
+A estrutura de dados base utilizada para a implementação do algoritmo é uma **matriz** de tamanho **n + 1 x m + 1**, onde n e m é o tamanho de **origin** e **target**
+respectivamente. </br>
 Primeiro deve-se inicializar os valores da primeira linha e da primeira coluna da **matriz**: </br>
 
 ````java
@@ -25,7 +25,7 @@ for (int i = 0; i <= second.length(); i++)
     operations[0][i] = i;
 ````
 
-Dadas as palavras "pato" e "gato", a matriz ficará com o seguinte formato após a inicialização:</br>
+Dadas as palavras "pato" e "gato", a **matriz** ficará com o seguinte formato após a inicialização:</br>
 
 ````java
     0   1   2   3   4
@@ -40,7 +40,7 @@ Essa inicialização significa:
 - Quantas operações são necessárias para transformar a palavra "pato" em uma string vazia. 4 operações de remoção
 - Quantas operações são necessárias para transformar uma string vazia na palavra "gato". 4 operações de inserção
 
-Esses valores serão usados posteriormente. Para calcular cada valor matriz é necessário usar a seguinte fórmula:
+Esses valores serão usados posteriormente. Para calcular cada elemento **i,j** da **matriz** é necessário usar a seguinte fórmula:
 
 ````java
 cost = (first.charAt(i - 1) == second.charAt(j - 1)) ? 0 : 1;
